@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 2 - Print window</title>
+</head>
+<body>
+    <h1>Print the content of this window</h1>
+    <button id="button">Click Here to print</button>
+
+    <script>
+        document.querySelector('#button').addEventListener('click', () => {
+            window.print();
+        })
+    </script>
+</body>
+</html>

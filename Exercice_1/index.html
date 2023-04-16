@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 1 - w3resources</title>
+</head>
+<body>
+    <h1>Today's date in string representation : </h1></br>
+    <p id="datePrint"></p></br>
+    <h1>Today's date in Object representation : </h1></br>
+    <p id="dateObject"></p></br>
+    <p id="dateObjectHour"></p></br>
+    <script>
+    function stringRepresentation(){
+        let datePrint = Date();
+        document.querySelector('#datePrint').innerHTML = datePrint;
+    }
+    stringRepresentation();
+
+    function objectRepresentation(){
+        //variables for date
+        let todayDate = new Date();
+        let day = todayDate.getDay();
+        let hour = todayDate.getHours();
+        let minutes = todayDate.getMinutes();
+        let secondes = todayDate.getSeconds();
+        let amPm = (hour >= 12)? " PM ":" AM "; 
+        hour = (hour >= 12)? hour - 12: hour;
+
+        //array for days
+        let dayList = [
+            'Sunday',
+            'Monday',
+            'Tuesday',
+            'Wednesday',
+            'Thursday',
+            'Friday',
+            'Saturday',
+        ];
+        //if to put 0 in front of the hour - in case, Else to show without the zero
+        if(hour < 10 && hour >= 0 ){
+            document.querySelector('#dateObjectHour').innerHTML = 'Current Time : 0'+hour+' : '+minutes+' : '+secondes + amPm;
+        }else{
+        console.log(dayList[day]);
+        document.querySelector('#dateObject').innerHTML = 'Today is : '+dayList[day]+'.';
+        document.querySelector('#dateObjectHour').innerHTML = 'Current Time : '+hour+' : '+minutes+' : '+secondes + amPm;
+        }
+    }
+
+    objectRepresentation();
+    </script>
+</body>
+</html>

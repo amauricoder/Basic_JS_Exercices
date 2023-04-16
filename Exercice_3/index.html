@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 3</title>
+    <h1>Date</h1>
+    <p id="output"></p> <br>
+    <p>mm-dd-yyyy</p>
+</head>
+
+<body>
+    <script>
+        let todayDate = new Date();
+        let day = todayDate.getDate();
+        let month = todayDate.getMonth() + 1;
+        let year = todayDate.getFullYear();
+
+        if (day <= 9 && month <= 9) {
+            document.querySelector('#output').innerHTML = '0' + month + '-' + '0' + day + '-' + year;
+        } else if (day <= 9) {
+            document.querySelector('#output').innerHTML = month + '-' + '0' + day + '-' + year;
+        } else if (month <= 9) {
+            document.querySelector('#output').innerHTML = '0' + month + '-' + day + '-' + year;
+        } else {
+            document.querySelector('#output').innerHTML = month + '-' + day + '-' + year;
+        }
+    </script>
+</body>
+
+</html>
