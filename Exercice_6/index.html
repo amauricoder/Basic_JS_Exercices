@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 6</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Um ano é bissexto se for divisível por 4.
+        No entanto, se um ano for divisível por 100, ele não será bissexto, a menos que:
+        O ano também seja divisível por 400.
+        */
+        function leapYear(yearValue) {
+            if (yearValue % 400 === 0) {
+                return yearValue + ' is a leap year';
+            } else if (yearValue % 100 === 0) {
+                return yearValue + ' is NOT a leap year';
+            } else if (yearValue % 4 === 0) {
+                return yearValue + ' is a leap year';
+            } else {
+                return yearValue + ' is NOT a leap year';
+            }
+        }
+
+
+        console.log(leapYear(2016));
+        console.log(leapYear(2000));
+        console.log(leapYear(1700));
+        console.log(leapYear(1800));
+        console.log(leapYear(100));
+        
+    </script>
+</body>
+
+</html>
